@@ -1,0 +1,243 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>网络安全入门01 - 无线密码 | 0xhack0&#39;s Personal Blog</title>
+
+<link rel="shortcut icon" href="https://anony250.github.io/favicon.ico?v=1711542627015">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://anony250.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            0xhack0&#39;s Personal Blog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1711542627015" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    网络安全入门01 - 无线密码
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2024-03-25 ·
+                    </time>
+                    
+                        <a href="https://anony250.github.io/tag/KeeSyt_Ae/" class="post-tags">
+                            # WiFi
+                        </a>
+                    
+                        <a href="https://anony250.github.io/tag/dGMCZRO9F6/" class="post-tags">
+                            # 破解
+                        </a>
+                    
+                        <a href="https://anony250.github.io/tag/xKIUXji9A/" class="post-tags">
+                            # 技术类
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h2 id="1-wifi万能钥匙"><em>1、WiFi万能钥匙</em></h2>
+<!-- more -->
+<ul>
+<li>
+<p>原理<br>
+收集用户手机上成功连接过的WiFi账号和密码，并上传、存储到App的服务器上，等到附近的蹭网者搜索到同一个网络时，该App就可以根据附近热点的配置信息，从服务器上自动匹配并取得相应的密码，通过数据流量发送到手机端，从而完成WiFi连网。</p>
+</li>
+<li>
+<p>WiFi万能钥匙显示密码版</p>
+<pre><code>链接：https://www.123pan.com/s/MgCGjv-83Gkv.html
+</code></pre>
+</li>
+</ul>
+<h2 id="2-wifi控制模块pywifi-幻影wifi等"><em>2、WiFi控制模块(PyWiFi、幻影WiFi等)</em></h2>
+<ul>
+<li>
+<p>原理<br>
+编写程序调用系统网卡，不断尝试字典中密码连接WiFi，从而完成WiFi破解。由于单个网卡的限制，每次只能有一个连接，而且尝试一个密码需要2s左右，所以只能跑小而美的字典。</p>
+</li>
+<li>
+<p>PyWiFi/幻影WiFi</p>
+<pre><code>PyWiFi链接：https://pypi.org/project/pywifi/
+幻影Wifi：https://down3.0f2.cn/download2/202308/25/004a7390a5482a83a2ad96e4bebc53b7.apk
+</code></pre>
+</li>
+</ul>
+<h2 id="3-pin码枚举"><em>3、Pin码枚举</em></h2>
+<ul>
+<li>
+<p>原理<br>
+当路由器启用WPS功能后，会随机生成1个8位数的Pin码，通过暴力枚举Pin码(共有11000个可能)，从而完成WiFi破解。ps：现在的路由器基本上都有WPS防护</p>
+</li>
+<li>
+<p>Reaver</p>
+<pre><code>链接：https://github.com/t6x/reaver-wps-fork-t6x
+</code></pre>
+</li>
+<li>
+<p>命令</p>
+<pre><code>开启网卡监听模式》airmon-ng start 网卡名
+查看附近WPS路由器》wash -i 网卡名+mon
+开始Pin破解》reaver -i 网卡名+mon -b BSSID -vv
+</code></pre>
+</li>
+</ul>
+<h2 id="4-handshark包破解"><em>4、HandShark包破解</em></h2>
+<ul>
+<li>
+<p>原理<br>
+通过嗅探并保存路由器与设备间正确密码交互数据包到本地文件，然后使用同样的加密算法加密字典中每行密码与文件中的密码hash进行对比，从而完成WiFi破解。</p>
+</li>
+<li>
+<p>Aircrack-ng</p>
+<pre><code>链接：https://github.com/aircrack-ng/aircrack-ng
+</code></pre>
+</li>
+<li>
+<p>命令</p>
+<pre><code>开启网卡监听模式》airmon-ng start 网卡名
+获取周围无线概况》airodump-ng 网卡名+mon
+嗅探无线网络handshake》airodump-ng -c 11 -w test 网卡名+mon
+deauth攻击断开连接》aireplay-ng -0 1000 -a AP的MAC -c 客户端的mac 网卡名+mon
+</code></pre>
+</li>
+</ul>
+<h2 id="5-钓鱼wifi获取"><em>5、钓鱼WiFi获取</em></h2>
+<ul>
+<li>
+<p>原理<br>
+通过仿照正常的WIFI搭建一个同样名称、BSSID、MAC等信息的热点，然后通过对WiFi进行拒绝服务攻击或者提供比合法WiFi更强的信号迫使无线客户端连接到伪热点上，然后通过劫持网页让用户输入WiFi密码。</p>
+</li>
+<li>
+<p>Fluxion</p>
+<pre><code>链接：https://github.com/FluxionNetwork/fluxion
+</code></pre>
+</li>
+</ul>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://anony250.github.io/post/makedowm-yu-fa-xiang-jie/" class="post-title gt-a-link">
+                    Markdown学习笔记
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">温故而知新</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://anony250.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
